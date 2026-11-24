@@ -1,0 +1,70 @@
+:root {
+  /* Primitive palette and typography */
+  --primitive-color-blue-700: #064bb2;
+  --primitive-color-blue-600: #0759d4;
+  --primitive-color-blue-500: #0869f9;
+  --primitive-color-neutral-900: #131927;
+  --primitive-color-neutral-700: #475569;
+  --primitive-color-neutral-500: #64748b;
+  --primitive-color-neutral-100: #eff3f9;
+  --primitive-color-neutral-50: #f8fafd;
+  --primitive-color-white: #ffffff;
+  --primitive-color-border: #dde4f0;
+  --primitive-color-border-strong: #c9dfff;
+  --primitive-color-media: #dfecff;
+  --primitive-font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Semantic tokens */
+  --semantic-color-action-primary: var(--primitive-color-blue-500);
+  --semantic-color-text-primary: var(--primitive-color-neutral-900);
+  --semantic-color-text-secondary: var(--primitive-color-neutral-500);
+  --semantic-color-surface-page: #f6f8fc;
+  --semantic-color-surface-card: var(--primitive-color-white);
+  --semantic-color-border-default: var(--primitive-color-border);
+  --semantic-radius-control: 14px;
+  --semantic-radius-card: 24px;
+  --semantic-radius-media: 12px;
+  --semantic-space-control-icon-gap: 8px;
+
+  /* Component tokens: mapped from the Figma Button variable definitions */
+  --component-button-primary-background: #0869f9;
+  --component-button-primary-background-hover: #0759d4;
+  --component-button-primary-background-pressed: #064bb2;
+  --component-button-primary-background-disabled: #eff3f9;
+  --component-button-primary-label: #ffffff;
+  --component-button-primary-label-disabled: #64748b;
+  --component-button-secondary-background-default: #ffffff;
+  --component-button-secondary-background-hover: #eff3f9;
+  --component-button-secondary-background-pressed: #eff3f9;
+  --component-button-secondary-background-disabled: #f8fafd;
+  --component-button-secondary-border-default: #dde4f0;
+  --component-button-secondary-border-hover: #0869f9;
+  --component-button-secondary-border-pressed: #92a0b7;
+  --component-button-secondary-border-disabled: #dde4f0;
+  --component-button-secondary-label-default: #131927;
+  --component-button-secondary-label-hover: #064bb2;
+  --component-button-secondary-label-pressed: #064bb2;
+  --component-button-secondary-label-disabled: #64748b;
+  --component-button-radius: 14px;
+  --component-button-icon-gap: 8px;
+  --component-button-small-height: 40px;
+  --component-button-small-padding-x: 16px;
+  --component-button-small-padding-y: 8px;
+  --component-button-small-font-size: 14px;
+  --component-button-small-icon-size: 16px;
+  --component-button-medium-height: 48px;
+  --component-button-medium-padding-x: 24px;
+  --component-button-medium-padding-y: 12px;
+  --component-button-medium-font-size: 16px;
+  --component-button-medium-icon-size: 20px;
+  --component-button-large-height: 56px;
+  --component-button-large-padding-x: 32px;
+  --component-button-large-padding-y: 16px;
+  --component-button-large-font-size: 18px;
+  --component-button-large-icon-size: 24px;
+
+  color: var(--semantic-color-text-primary);
+  background: var(--semantic-color-surface-page);
+  font-family: var(--primitive-font-family);
+  font-synthesis: none;
+}
