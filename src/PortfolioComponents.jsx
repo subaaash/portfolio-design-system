@@ -2,8 +2,6 @@ import { useId } from 'react';
 import './generated/tokens.css';
 import './PortfolioComponents.css';
 
-const passthrough = (props) => props;
-
 export function IconButton({ label, children, className = '', ...props }) {
   if (!label) throw new Error('IconButton requires an accessible label.');
   return <button {...props} type={props.type || 'button'} aria-label={label} className={`portfolio-icon-button ${className}`.trim()}>{children}</button>;
@@ -26,7 +24,7 @@ export function FooterLink({ href, children, className = '', ...props }) {
 }
 
 export function ProjectThumbnail({ src, alt = '', className = '', ...props }) {
-  return <div className={`portfolio-project-thumbnail ${className}`.trim()} {...props}>{src ? <img src={src} alt={alt} /> : <div className="portfolio-project-thumbnail__empty" aria-label={alt || 'Project artwork placeholder'} />}</div>;
+  return <div className={`portfolio-project-thumbnail ${className}`.trim()} {...props}>{src ? <img src={src} alt={alt} /> : <div className="portfolio-project-thumbnail__empty" role="img" aria-label={alt || 'Project artwork placeholder'} />}</div>;
 }
 
 export function ExperienceCard({ value, description, children, className = '', ...props }) {
