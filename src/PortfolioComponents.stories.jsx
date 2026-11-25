@@ -3,7 +3,7 @@ const Arrow=()=> <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="tr
 const Frame=({children})=><div className="portfolio-story-frame">{children}</div>;
 export default {title:'Components/Portfolio'};
 export const IconButtonStory={name:'Icon button',render:()=> <Frame><C.IconButton label="Next"><Arrow/></C.IconButton></Frame>};
-export const NavigationStory={name:'Navigation',render:()=> <Frame><C.Navigation><C.NavigationItem href="#home" active>Home</C.NavigationItem><C.NavigationItem href="#work">Work</C.NavigationItem></C.Navigation></Frame>};
+export const NavigationStory={name:'Navigation',render:()=> <Frame><C.Navigation brand="Subash /"><C.NavigationItem href="#home" active>Home</C.NavigationItem><C.NavigationItem href="#work">Work</C.NavigationItem></C.Navigation></Frame>};
 export const TextLinkStory={name:'Text link',render:()=> <Frame><C.TextLink href="#work">Read the case study</C.TextLink></Frame>};
 export const FooterLinkStory={name:'Footer link',render:()=> <Frame><C.FooterLink href="#contact">Contact</C.FooterLink></Frame>};
 export const ProjectThumbnailStory={name:'Project thumbnail',render:()=> <Frame><C.ProjectThumbnail/></Frame>};
