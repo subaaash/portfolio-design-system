@@ -16,7 +16,7 @@ export const TimelineItemStory={name:'Timeline item',render:()=> <Frame><ol><C.T
 export const RoleCardStory={name:'Role card',render:()=> <Frame><C.RoleCard title="Senior UX Designer" company="Portfolio" period="2022–2026"/></Frame>};
 export const ContactMethodCardStory={name:'Contact method card',render:()=> <Frame><C.ContactMethodCard label="Email" value="subash@example.com" href="mailto:subash@example.com"/></Frame>};
 export const FeaturedBadgeStory={name:'Featured badge',render:()=> <Frame><C.FeaturedBadge/></Frame>};
-export const TooltipStory={name:'Tooltip',render:()=> <Frame><span><button type="button" aria-describedby="tip">More info</button> <C.Tooltip id="tip">Short contextual guidance</C.Tooltip></span></Frame>};
+export const TooltipStory={name:'Tooltip',render:()=> <Frame><C.Tooltip trigger={<button type="button">More info</button>}>Short contextual guidance</C.Tooltip></Frame>};
 export const TextFieldStory={name:'Text field',render:()=> <Frame><C.TextField label="Email" type="email" placeholder="name@example.com"/></Frame>};
 export const TextAreaStory={name:'Text area',render:()=> <Frame><C.TextArea label="Message" rows={4}/></Frame>};
 export const FormMessageStory={name:'Form messages',render:()=> <Frame><C.FormMessage kind="error">Enter a valid email address.</C.FormMessage><C.FormMessage kind="success">Saved.</C.FormMessage><C.FormMessage kind="info">Helpful information.</C.FormMessage></Frame>};
