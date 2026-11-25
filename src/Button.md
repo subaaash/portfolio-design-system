@@ -1,6 +1,6 @@
 # Button Component Specification
 
-**Status:** Design specification based on the existing Figma token source. A reusable React Button component and Button Storybook entry are not implemented in this repository yet.
+**Status:** Implemented as `src/Button.jsx` with token-backed styles in `src/Button.css` and stories in `src/Button.stories.jsx`. The existing Figma/token specification remains the source of truth.
 
 ## Purpose
 
@@ -80,3 +80,31 @@ Document the component API, when to use each variant, keyboard behavior, and acc
 ## Implementation note
 
 Before building the component, reconcile the shared primary token paddings (`semantic.space.control.padding-x/y`) with the size-specific padding tokens above. The size-specific values define this specification’s small, medium, and large sizing; avoid applying conflicting padding values simultaneously. Update this document and the Storybook stories if the approved Figma tokens change.
+
+
+## React API
+
+```jsx
+import { Button } from './Button.jsx';
+
+<Button variant="primary" size="medium" type="button">
+  View work
+</Button>
+
+<Button variant="secondary" size="small" icon={<ArrowIcon />} iconPosition="leading">
+  Go back
+</Button>
+```
+
+- `variant`: `primary` or `secondary` (default: `primary`)
+- `size`: `small`, `medium`, or `large` (default: `medium`)
+- `type`: native button type (default: `button`)
+- `disabled`: uses the native disabled state
+- `icon`: optional decorative icon; the text label remains visible
+- `iconPosition`: `leading` or `trailing` (default: `trailing`)
+- `fullWidth`: fills the available inline space when true
+- Standard button attributes such as `aria-label`, `onClick`, and `name` are forwarded to the native button.
+
+## Storybook coverage
+
+The stories cover primary and secondary variants, all three sizes, native disabled states, leading and trailing icons, full-width layout, and a size/variant matrix. Hover and pressed styles are exercised through pointer interaction; keyboard focus is shown with the visible `:focus-visible` outline. The button uses semantic button behavior and does not replace navigational links.
