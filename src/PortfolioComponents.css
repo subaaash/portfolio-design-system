@@ -5,12 +5,13 @@
 .portfolio-nav-item{position:relative;display:inline-flex;padding-block:calc(var(--primitive-space-8)*1px);color:var(--component-nav-item-label-default);text-decoration:none}
 .portfolio-nav-item:hover{color:var(--component-nav-item-label-hover)}
 .portfolio-nav-item.is-active{color:var(--component-nav-item-label-active)}
-.portfolio-nav-item.is-active:after{position:absolute;inset-inline:0;inset-block-end:0;block-size:calc(var(--primitive-border-width-2)*1px);background:var(--component-nav-item-indicator);content:""}
+.portfolio-nav-item.is-active:after{position:absolute;inset-inline:0;inset-block-end:0;block-size:calc(var(--primitive-border-width-2)*1px);background:var(--component-nav-item-indicator-active);content:""}
 .portfolio-text-link{color:var(--component-text-link-label-default);text-underline-offset:.2em}
 .portfolio-text-link:hover{color:var(--component-text-link-label-hover)}
 .portfolio-text-link:focus-visible{color:var(--component-text-link-label-focus)}
 .portfolio-footer-link{color:var(--component-footer-link-label-default);text-underline-offset:.2em}
-.portfolio-footer-link:hover,.portfolio-footer-link:focus-visible{color:var(--component-footer-link-label-hover)}
+.portfolio-footer-link:hover{color:var(--component-footer-link-label-hover)}
+.portfolio-footer-link:focus-visible{color:var(--component-footer-link-label-focus)}
 .portfolio-project-thumbnail{overflow:hidden;background:var(--component-project-thumbnail-background);border-radius:calc(var(--component-project-thumbnail-radius)*1px)}
 .portfolio-project-thumbnail img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
 .portfolio-project-thumbnail__empty{min-block-size:calc(var(--primitive-space-40)*1px);background:var(--component-project-thumbnail-media-surface)}
@@ -40,9 +41,13 @@
 .portfolio-featured-badge{display:inline-flex;padding:calc(var(--primitive-space-4)*1px) calc(var(--primitive-space-8)*1px);border-radius:calc(var(--primitive-radius-14)*1px);background:var(--component-featured-badge-background);color:var(--semantic-color-text-brand);font-size:calc(var(--primitive-typography-size-14)*1px)}
 .portfolio-tooltip{display:inline-block;padding:calc(var(--primitive-space-8)*1px) calc(var(--primitive-space-12)*1px);border-radius:calc(var(--primitive-radius-8)*1px);background:var(--component-tooltip-background);color:var(--semantic-color-text-inverse);font-size:calc(var(--primitive-typography-size-14)*1px)}
 .portfolio-field{display:grid;gap:calc(var(--primitive-space-8)*1px)}
+.portfolio-story-frame{display:grid;gap:calc(var(--primitive-space-16)*1px);max-inline-size:calc(var(--primitive-space-120)*1px);padding:calc(var(--primitive-space-24)*1px)}
 .portfolio-field__label{color:var(--component-text-field-label-default)}
 .portfolio-field__control{box-sizing:border-box;inline-size:100%;min-block-size:calc(var(--primitive-dimension-button-height-48)*1px);padding:calc(var(--primitive-space-12)*1px);border:calc(var(--primitive-border-width-1)*1px) solid var(--component-text-field-border-default);border-radius:calc(var(--primitive-radius-8)*1px);background:var(--component-text-field-background-default);color:var(--semantic-color-text-primary);font:inherit}
-textarea.portfolio-field__control{min-block-size:calc(var(--primitive-space-40)*1px);resize:vertical}
+textarea.portfolio-field__control{min-block-size:calc(var(--primitive-space-40)*1px);resize:vertical;border-color:var(--component-text-area-border-default);background:var(--component-text-area-background-default);color:var(--semantic-color-text-primary)}
+textarea.portfolio-field__control:focus{border-color:var(--component-text-area-border-focus)}
+textarea.portfolio-field__control[aria-invalid=true]{border-color:var(--component-text-area-border-error)}
+textarea.portfolio-field__control:disabled{border-color:var(--component-text-area-border-disabled);background:var(--component-text-area-background-disabled);color:var(--component-text-area-label-disabled)}
 .portfolio-field__control:focus{border-color:var(--component-text-field-border-focus);outline:calc(var(--primitive-border-width-2)*1px) solid var(--semantic-color-border-focus);outline-offset:1px}
 .portfolio-field__control[aria-invalid=true]{border-color:var(--component-text-field-border-error)}
 .portfolio-field__control:disabled{border-color:var(--component-text-field-border-disabled);background:var(--component-text-field-background-disabled);color:var(--component-text-field-label-disabled)}
