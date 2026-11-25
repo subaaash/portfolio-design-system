@@ -7,8 +7,8 @@ export function IconButton({ label, children, className = '', ...props }) {
   return <button {...props} type={props.type || 'button'} aria-label={label} className={`portfolio-icon-button ${className}`.trim()}>{children}</button>;
 }
 
-export function Navigation({ label = 'Primary navigation', children, className = '', ...props }) {
-  return <nav {...props} aria-label={label} className={`portfolio-navigation ${className}`.trim()}>{children}</nav>;
+export function Navigation({ label = 'Primary navigation', brand, brandHref = '#home', children, className = '', ...props }) {
+  return <nav {...props} aria-label={label} className={`portfolio-navigation ${className}`.trim()}>{brand && <a className="portfolio-navigation__brand" href={brandHref}>{brand}</a>}{children}</nav>;
 }
 
 export function NavigationItem({ href, active = false, children, className = '', ...props }) {
