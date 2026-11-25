@@ -1,0 +1,64 @@
+.portfolio-icon-button{display:inline-grid;place-items:center;inline-size:calc(var(--component-icon-button-size)*1px);block-size:calc(var(--component-icon-button-size)*1px);padding:0;border:0;border-radius:calc(var(--component-icon-button-radius)*1px);background:var(--component-icon-button-background);color:var(--component-icon-button-label-default);cursor:pointer}
+.portfolio-icon-button:focus-visible,.portfolio-nav-item:focus-visible,.portfolio-text-link:focus-visible,.portfolio-footer-link:focus-visible,.portfolio-contact-method-card:focus-visible{outline:calc(var(--primitive-border-width-2)*1px) solid var(--semantic-color-border-focus);outline-offset:calc(var(--primitive-border-width-2)*1px)}
+.portfolio-icon-button:hover:not(:disabled){background:var(--component-icon-button-background-hover);color:var(--component-icon-button-label-hover)}\n.portfolio-icon-button:active:not(:disabled){background:var(--component-icon-button-background-pressed)}\n.portfolio-icon-button:disabled{background:var(--component-icon-button-background-disabled);color:var(--component-icon-button-label-disabled);cursor:not-allowed}
+.portfolio-navigation{display:flex;align-items:center;gap:calc(var(--primitive-space-24)*1px)}
+.portfolio-nav-item{position:relative;display:inline-flex;padding-block:calc(var(--primitive-space-8)*1px);color:var(--component-nav-item-label-default);text-decoration:none}
+.portfolio-nav-item:hover{color:var(--component-nav-item-label-hover)}
+.portfolio-nav-item.is-active{color:var(--component-nav-item-label-active)}
+.portfolio-nav-item.is-active:after{position:absolute;inset-inline:0;inset-block-end:0;block-size:calc(var(--primitive-border-width-2)*1px);background:var(--component-nav-item-indicator-active);content:""}
+.portfolio-text-link{color:var(--component-text-link-label-default);text-underline-offset:.2em}
+.portfolio-text-link:hover{color:var(--component-text-link-label-hover)}
+.portfolio-text-link:focus-visible{color:var(--component-text-link-label-focus)}
+.portfolio-footer-link{color:var(--component-footer-link-label-default);text-underline-offset:.2em}
+.portfolio-footer-link:hover{color:var(--component-footer-link-label-hover)}
+.portfolio-footer-link:focus-visible{color:var(--component-footer-link-label-focus)}
+.portfolio-project-thumbnail{overflow:hidden;background:var(--component-project-thumbnail-background);border-radius:calc(var(--component-project-thumbnail-radius)*1px)}
+.portfolio-project-thumbnail img{display:block;inline-size:100%;block-size:100%;object-fit:cover}
+.portfolio-project-thumbnail__empty{min-block-size:calc(var(--primitive-space-40)*1px);background:var(--component-project-thumbnail-media-surface)}
+.portfolio-experience-card{display:grid;gap:calc(var(--component-experience-card-content-gap)*1px);padding:calc(var(--component-experience-card-padding)*1px);background:var(--component-experience-card-background);border:calc(var(--primitive-border-width-1)*1px) solid var(--component-experience-card-border);border-radius:calc(var(--component-experience-card-radius)*1px)}
+.portfolio-experience-card__value{color:var(--component-experience-card-value)}
+.portfolio-experience-card__description{margin:0;color:var(--component-experience-card-description)}
+.portfolio-skill-group-card{padding:calc(var(--primitive-space-16)*1px);background:var(--component-skill-group-card-background)}
+.portfolio-skill-group-card h3,.portfolio-skill-group-card p{margin-block:0 calc(var(--primitive-space-8)*1px)}
+.portfolio-skill-group-card h3{color:var(--component-skill-group-card-title)}
+.portfolio-skill-group-card p{color:var(--component-skill-group-card-description)}
+.portfolio-skill-item{color:var(--component-skill-item-title)}
+.portfolio-skill-item p{margin-block:calc(var(--primitive-space-8)*1px) 0;color:var(--component-skill-item-description)}
+.portfolio-domain-expertise-card{padding:calc(var(--component-domain-expertise-card-padding)*1px);background:var(--component-domain-expertise-card-background);border-radius:calc(var(--component-domain-expertise-card-radius)*1px)}
+.portfolio-domain-expertise-card h3{margin-block:0;color:var(--component-domain-expertise-card-title)}
+.portfolio-domain-expertise-card p{margin-block:calc(var(--primitive-space-8)*1px) 0;color:var(--component-domain-expertise-card-description)}
+.portfolio-skill-chip{display:inline-flex;padding:calc(var(--primitive-space-8)*1px) calc(var(--primitive-space-16)*1px);border-radius:calc(var(--primitive-radius-14)*1px);background:var(--component-skill-chip-background);color:var(--component-skill-chip-label)}
+.portfolio-timeline-item{position:relative;display:grid;grid-template-columns:minmax(calc(var(--primitive-space-80)*1px),auto) 1fr;gap:calc(var(--primitive-space-16)*1px);list-style:none}
+.portfolio-timeline-item time{color:var(--component-timeline-item-date)}
+.portfolio-timeline-item__marker{inline-size:calc(var(--primitive-space-12)*1px);block-size:calc(var(--primitive-space-12)*1px);border-radius:50%;background:var(--component-timeline-item-marker)}
+.portfolio-timeline-item h3{margin:0}
+.portfolio-role-card{padding:calc(var(--primitive-space-16)*1px);background:var(--component-role-card-background)}
+.portfolio-role-card h3{margin:0;color:var(--component-role-card-title)}
+.portfolio-role-card__company,.portfolio-role-card__period{margin-block:calc(var(--primitive-space-8)*1px) 0}
+.portfolio-contact-method-card{display:flex;flex-direction:column;gap:calc(var(--primitive-space-8)*1px);padding:calc(var(--primitive-space-16)*1px);background:var(--component-contact-method-card-background);color:inherit;text-decoration:none}
+.portfolio-contact-method-card strong{color:var(--component-contact-method-card-label)}
+.portfolio-contact-method-card span{color:var(--component-contact-method-card-value)}
+.portfolio-featured-badge{display:inline-flex;padding:calc(var(--primitive-space-8)*1px) calc(var(--primitive-space-8)*1px);border-radius:calc(var(--primitive-radius-14)*1px);background:var(--component-featured-badge-background);color:var(--semantic-color-text-brand);font-size:calc(var(--primitive-typography-size-14)*1px)}
+.portfolio-tooltip-container{position:relative;display:inline-flex}\n.portfolio-tooltip[hidden]{display:none}\n.portfolio-tooltip{position:absolute;inset-block-end:calc(100% + var(--primitive-space-8)*1px);inset-inline-start:50%;z-index:1;inline-size:max-content;max-inline-size:calc(var(--primitive-space-120)*1px);transform:translateX(-50%);padding:calc(var(--component-tooltip-padding-y)*1px) calc(var(--component-tooltip-padding-x)*1px);border-radius:calc(var(--component-tooltip-radius)*1px);background:var(--component-tooltip-background);color:var(--component-tooltip-label);font-size:calc(var(--primitive-typography-size-14)*1px)}
+.portfolio-field{display:grid;gap:calc(var(--primitive-space-8)*1px)}
+.portfolio-story-frame{display:grid;gap:calc(var(--primitive-space-16)*1px);max-inline-size:calc(var(--primitive-space-120)*1px);padding:calc(var(--primitive-space-24)*1px)}
+.portfolio-field__label{color:var(--component-text-field-label-default)}
+.portfolio-field__control{box-sizing:border-box;inline-size:100%;min-block-size:calc(var(--primitive-dimension-button-height-48)*1px);padding:calc(var(--primitive-space-12)*1px);border:calc(var(--primitive-border-width-1)*1px) solid var(--component-text-field-border-default);border-radius:calc(var(--primitive-radius-8)*1px);background:var(--component-text-field-background-default);color:var(--semantic-color-text-primary);font:inherit}
+textarea.portfolio-field__control{min-block-size:calc(var(--primitive-space-40)*1px);resize:vertical;border-color:var(--component-text-area-border-default);background:var(--component-text-area-background-default);color:var(--semantic-color-text-primary)}
+textarea.portfolio-field__control:focus{border-color:var(--component-text-area-border-focus)}
+textarea.portfolio-field__control[aria-invalid=true]{border-color:var(--component-text-area-border-error)}
+textarea.portfolio-field__control:disabled{border-color:var(--component-text-area-border-disabled);background:var(--component-text-area-background-disabled);color:var(--component-text-area-label-disabled)}
+.portfolio-field__control:focus{border-color:var(--component-text-field-border-focus);outline:calc(var(--primitive-border-width-2)*1px) solid var(--semantic-color-border-focus);outline-offset:calc(var(--primitive-border-width-1)*1px)}
+.portfolio-field__control[aria-invalid=true]{border-color:var(--component-text-field-border-error)}
+.portfolio-field__control:disabled{border-color:var(--component-text-field-border-disabled);background:var(--component-text-field-background-disabled);color:var(--component-text-field-label-disabled)}
+.portfolio-form-message{margin:0}
+.portfolio-form-message--error{border-inline-start:calc(var(--primitive-border-width-2)*1px) solid var(--component-form-message-error-border);color:var(--component-form-message-error-label);padding-inline-start:calc(var(--primitive-space-8)*1px)}
+.portfolio-form-message--success{color:var(--component-form-message-success-label)}
+.portfolio-form-message--info{color:var(--component-form-message-info-label)}
+.portfolio-section-eyebrow{display:flex;align-items:center;gap:calc(var(--primitive-space-8)*1px);color:var(--component-section-eyebrow-label)}
+.portfolio-section-eyebrow:after{inline-size:calc(var(--primitive-space-32)*1px);block-size:calc(var(--primitive-border-width-1)*1px);background:var(--component-section-eyebrow-rule);content:""}
+.portfolio-divider{border:0;border-block-start:calc(var(--primitive-border-width-1)*1px) solid var(--component-divider-color)}
+.portfolio-footer{padding-block:calc(var(--primitive-space-24)*1px);color:var(--component-footer-copyright)}
+
+.portfolio-navigation__brand{color:var(--component-navigation-wordmark);font-weight:var(--primitive-typography-weight-bold);text-decoration:none}
+.portfolio-navigation{flex-wrap:wrap}

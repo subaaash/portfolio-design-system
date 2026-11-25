@@ -2,14 +2,38 @@
   "primitive": {
     "color": {
       "observed": {
-        "0284c7": { "$type": "color", "$value": "#0284c7" },
-        "0e1a34": { "$type": "color", "$value": "#0e1a34" },
-        "101b34": { "$type": "color", "$value": "#101b34" },
-        "58667d": { "$type": "color", "$value": "#58667d" },
-        "606b7d": { "$type": "color", "$value": "#606b7d" },
-        "c9dfff": { "$type": "color", "$value": "#c9dfff" },
-        "dfecff": { "$type": "color", "$value": "#dfecff" },
-        "eff4fd": { "$type": "color", "$value": "#eff4fd" }
+        "0284c7": {
+          "$type": "color",
+          "$value": "#0284c7"
+        },
+        "0e1a34": {
+          "$type": "color",
+          "$value": "#0e1a34"
+        },
+        "101b34": {
+          "$type": "color",
+          "$value": "#101b34"
+        },
+        "58667d": {
+          "$type": "color",
+          "$value": "#58667d"
+        },
+        "606b7d": {
+          "$type": "color",
+          "$value": "#606b7d"
+        },
+        "c9dfff": {
+          "$type": "color",
+          "$value": "#c9dfff"
+        },
+        "dfecff": {
+          "$type": "color",
+          "$value": "#dfecff"
+        },
+        "eff4fd": {
+          "$type": "color",
+          "$value": "#eff4fd"
+        }
       },
       "brand": {
         "100": {
@@ -2156,6 +2180,54 @@
         },
         "$type": "color",
         "$value": "{semantic.color.text.primary}"
+      },
+      "background": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-domain-expertise-card-background)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.surface.default}"
+      },
+      "description": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-domain-expertise-card-description)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.text.secondary}"
+      },
+      "radius": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "CORNER_RADIUS"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-domain-expertise-card-radius)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.radius.8}"
+      },
+      "padding": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "GAP"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-domain-expertise-card-padding)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.space.16}"
       }
     },
     "skill-chip": {
@@ -2298,6 +2370,102 @@
         },
         "$type": "color",
         "$value": "{primitive.color.observed.eff4fd}"
+      },
+      "background-hover": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-background-hover)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.surface.subtle}"
+      },
+      "background-pressed": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-background-pressed)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.surface.default}"
+      },
+      "background-disabled": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-background-disabled)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.surface.subtle}"
+      },
+      "label-default": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-label-default)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.text.primary}"
+      },
+      "label-hover": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-label-hover)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.text.brand}"
+      },
+      "label-disabled": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-label-disabled)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.text.secondary}"
+      },
+      "radius": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "CORNER_RADIUS"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-radius)"
+          }
+        },
+        "$type": "number",
+        "$value": "{semantic.radius.control}"
+      },
+      "size": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "WIDTH_HEIGHT"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-icon-button-size)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.dimension.button-height.48}"
       }
     },
     "text-field": {
@@ -2603,6 +2771,54 @@
         },
         "$type": "color",
         "$value": "{semantic.color.surface.brand-subtle}"
+      },
+      "label": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-featured-badge-label)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.text.brand}"
+      },
+      "radius": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "CORNER_RADIUS"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-featured-badge-radius)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.radius.8}"
+      },
+      "padding-x": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "GAP"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-featured-badge-padding-x)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.space.8}"
+      },
+      "padding-y": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "GAP"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-featured-badge-padding-y)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.space.8}"
       }
     },
     "tooltip": {
@@ -2614,6 +2830,54 @@
         },
         "$type": "color",
         "$value": "{semantic.color.text.primary}"
+      },
+      "label": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-tooltip-label)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.text.inverse}"
+      },
+      "radius": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "CORNER_RADIUS"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-tooltip-radius)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.radius.8}"
+      },
+      "padding-x": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "GAP"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-tooltip-padding-x)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.space.12}"
+      },
+      "padding-y": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "GAP"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-tooltip-padding-y)"
+          }
+        },
+        "$type": "number",
+        "$value": "{primitive.space.8}"
       }
     },
     "form-message": {
@@ -2625,6 +2889,42 @@
         },
         "$type": "color",
         "$value": "{component.text-field.border.error}"
+      },
+      "error-label": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-form-message-error-label)"
+          }
+        },
+        "$type": "color",
+        "$value": "{primitive.color.red.600}"
+      },
+      "success-label": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-form-message-success-label)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.status.success}"
+      },
+      "info-label": {
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "Web": "var(--component-form-message-info-label)"
+          }
+        },
+        "$type": "color",
+        "$value": "{semantic.color.status.info}"
       }
     }
   }
