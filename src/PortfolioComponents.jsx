@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { cloneElement, isValidElement, useId, useState } from 'react';
 import './generated/tokens.css';
 import './PortfolioComponents.css';
 
@@ -66,8 +66,40 @@ export function FeaturedBadge({ children = 'Featured', className = '', ...props 
   return <span {...props} className={`portfolio-featured-badge ${className}`.trim()}>{children}</span>;
 }
 
-export function Tooltip({ id, children, className = '', ...props }) {
-  return <span {...props} id={id} role="tooltip" className={`portfolio-tooltip ${className}`.trim()}>{children}</span>;
+export function Tooltip({ trigger, children, className = '', ...props }) {
+  const tooltipId = useId();
+  const [isOpen, setIsOpen] = useState(false);
+  if (!isValidElement(trigger)) {
+    throw new Error('Tooltip requires a focusable trigger element.');
+  }
+  const describedBy = [trigger.props['aria-describedby'], tooltipId].filter(Boolean).join(' ');
+  const triggerElement = cloneElement(trigger, {
+    'aria-describedby': describedBy,
+    onFocus: (event) => {
+      trigger.props.onFocus?.(event);
+      setIsOpen(true);
+    },
+    onBlur: (event) => {
+      trigger.props.onBlur?.(event);
+      setIsOpen(false);
+    },
+    onMouseEnter: (event) => {
+      trigger.props.onMouseEnter?.(event);
+      setIsOpen(true);
+    },
+    onMouseLeave: (event) => {
+      trigger.props.onMouseLeave?.(event);
+      setIsOpen(false);
+    },
+    onKeyDown: (event) => {
+      trigger.props.onKeyDown?.(event);
+      if (event.key === 'Escape') setIsOpen(false);
+    },
+  });
+  return <span className="portfolio-tooltip-container">
+    {triggerElement}
+    <span {...props} id={tooltipId} role="tooltip" hidden={!isOpen} className={`portfolio-tooltip ${className}`.trim()}>{children}</span>
+  </span>;
 }
 
 function Field({ as: Control = 'input', label, id, error, className = '', ...props }) {
