@@ -1,6 +1,16 @@
 {
   "primitive": {
     "color": {
+      "observed": {
+        "0284c7": { "$type": "color", "$value": "#0284c7" },
+        "0e1a34": { "$type": "color", "$value": "#0e1a34" },
+        "101b34": { "$type": "color", "$value": "#101b34" },
+        "58667d": { "$type": "color", "$value": "#58667d" },
+        "606b7d": { "$type": "color", "$value": "#606b7d" },
+        "c9dfff": { "$type": "color", "$value": "#c9dfff" },
+        "dfecff": { "$type": "color", "$value": "#dfecff" },
+        "eff4fd": { "$type": "color", "$value": "#eff4fd" }
+      },
       "brand": {
         "100": {
           "$extensions": {
@@ -2165,7 +2175,7 @@
           ]
         },
         "$type": "color",
-        "$value": "{primitive.color.observed.24314c}"
+        "$value": "{primitive.color.neutral.700}"
       }
     },
     "timeline-item": {
