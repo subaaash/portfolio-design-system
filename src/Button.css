@@ -1,0 +1,123 @@
+.portfolio-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--component-button-primary-icon-gap) * 1px);
+  min-block-size: calc(var(--component-button-size-medium-height) * 1px);
+  padding:
+    calc(var(--component-button-size-medium-padding-y) * 1px)
+    calc(var(--component-button-size-medium-padding-x) * 1px);
+  border: calc(var(--primitive-border-width-1) * 1px) solid transparent;
+  border-radius: calc(var(--component-button-primary-radius) * 1px);
+  color: var(--component-button-primary-label);
+  background: var(--component-button-primary-background);
+  font-family: var(--primitive-typography-family-sans), Inter, sans-serif;
+  font-size: calc(var(--component-button-size-medium-font-size) * 1px);
+  font-weight: var(--primitive-typography-weight-bold);
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.portfolio-button:focus-visible {
+  outline: calc(var(--primitive-border-width-2) * 1px) solid var(--semantic-color-border-focus);
+  outline-offset: calc(var(--primitive-border-width-2) * 1px);
+}
+
+.portfolio-button:disabled {
+  color: var(--component-button-primary-label-disabled);
+  background: var(--component-button-primary-background-disabled);
+  cursor: not-allowed;
+}
+
+.portfolio-button--primary:hover:not(:disabled) {
+  background: var(--component-button-primary-background-hover);
+}
+
+.portfolio-button--primary:active:not(:disabled) {
+  background: var(--component-button-primary-background-pressed);
+}
+
+.portfolio-button--secondary {
+  color: var(--component-button-secondary-label-default);
+  background: var(--component-button-secondary-background-default);
+  border-color: var(--component-button-secondary-border-default);
+}
+
+.portfolio-button--secondary:hover:not(:disabled) {
+  color: var(--component-button-secondary-label-hover);
+  background: var(--component-button-secondary-background-hover);
+  border-color: var(--component-button-secondary-border-hover);
+}
+
+.portfolio-button--secondary:active:not(:disabled) {
+  color: var(--component-button-secondary-label-pressed);
+  background: var(--component-button-secondary-background-pressed);
+  border-color: var(--component-button-secondary-border-pressed);
+}
+
+.portfolio-button--secondary:disabled {
+  color: var(--component-button-secondary-label-disabled);
+  background: var(--component-button-secondary-background-disabled);
+  border-color: var(--component-button-secondary-border-disabled);
+}
+
+.portfolio-button--small {
+  min-block-size: calc(var(--component-button-size-small-height) * 1px);
+  padding:
+    calc(var(--component-button-size-small-padding-y) * 1px)
+    calc(var(--component-button-size-small-padding-x) * 1px);
+  font-size: calc(var(--component-button-size-small-font-size) * 1px);
+}
+
+.portfolio-button--medium {
+  min-block-size: calc(var(--component-button-size-medium-height) * 1px);
+  padding:
+    calc(var(--component-button-size-medium-padding-y) * 1px)
+    calc(var(--component-button-size-medium-padding-x) * 1px);
+  font-size: calc(var(--component-button-size-medium-font-size) * 1px);
+}
+
+.portfolio-button--large {
+  min-block-size: calc(var(--component-button-size-large-height) * 1px);
+  padding:
+    calc(var(--component-button-size-large-padding-y) * 1px)
+    calc(var(--component-button-size-large-padding-x) * 1px);
+  font-size: calc(var(--component-button-size-large-font-size) * 1px);
+}
+
+.portfolio-button--full-width {
+  inline-size: 100%;
+}
+
+.portfolio-button__label {
+  min-inline-size: 0;
+}
+
+.portfolio-button__icon {
+  display: inline-flex;
+  flex: none;
+  inline-size: calc(var(--component-button-size-medium-icon-size) * 1px);
+  block-size: calc(var(--component-button-size-medium-icon-size) * 1px);
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-button--small .portfolio-button__icon {
+  inline-size: calc(var(--component-button-size-small-icon-size) * 1px);
+  block-size: calc(var(--component-button-size-small-icon-size) * 1px);
+}
+
+.portfolio-button--large .portfolio-button__icon {
+  inline-size: calc(var(--component-button-size-large-icon-size) * 1px);
+  block-size: calc(var(--component-button-size-large-icon-size) * 1px);
+}
+
+.portfolio-button__icon > svg,
+.portfolio-button__icon > img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
