@@ -20,7 +20,7 @@ const expertise = [
 
 const contactMethods = [
   ['Email', 'Add professional email', 'contact-mail.svg'],
-  ['LinkedIn', 'Add LinkedIn profile link', 'contact-linkedin.svg'],
+  ['LinkedIn', 'linkedin.com/in/subash-c-b183191bb', 'contact-linkedin.svg', 'https://www.linkedin.com/in/subash-c-b183191bb/'],
   ['Behance', 'behance.net/subashc3', 'contact-behance.svg', 'https://www.behance.net/subashc3/'],
   ['Resume / CV', 'Download my latest resume (PDF)', 'contact-download.svg'],
 ];
@@ -254,9 +254,10 @@ function Contact() {
             <ul className="contact-methods">
               {contactMethods.map(([title, detail, icon, href]) => {
                 const Card = href ? 'a' : 'div';
+                const isExternal = href?.startsWith('https://');
                 return (
                   <li key={title}>
-                    <Card className="contact-method" href={href}>
+                    <Card className="contact-method" href={href} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
                       <span className="icon-tile"><Icon file={icon} /></span>
                       <span><strong>{title}</strong><small>{detail}</small></span>
                       {href && <Icon file="arrow-right.svg" className="contact-method__arrow" />}
