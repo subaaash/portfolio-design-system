@@ -19,10 +19,10 @@ const expertise = [
 ];
 
 const contactMethods = [
-  ['Email', 'Add professional email', 'contact-mail.svg'],
+  ['Email', 'subash2hi@gmail.com', 'contact-mail.svg'],
   ['LinkedIn', 'linkedin.com/in/subash-c-b183191bb', 'contact-linkedin.svg', 'https://www.linkedin.com/in/subash-c-b183191bb/'],
   ['Behance', 'behance.net/subashc3', 'contact-behance.svg', 'https://www.behance.net/subashc3/'],
-  ['Resume / CV', 'Download my latest resume (PDF)', 'contact-download.svg'],
+  ['Mobile', '+91 9080454635', 'contact-download.svg'],
 ];
 
 function Icon({ file, className }) {
